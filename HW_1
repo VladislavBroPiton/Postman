@@ -522,7 +522,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Vadim\",\r\n    \"age\": 33,\r\n    \"salary\": 550,\r\n    \"auth_token\":\"\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Vlad\",\r\n    \"age\": 30,\r\n    \"salary\": 550,\r\n    \"auth_token\":\"\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
