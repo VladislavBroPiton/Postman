@@ -20,7 +20,7 @@ response:
     “Str”
 ]
 
-==================
+___
 
 EP_2
 Method: POST
@@ -38,7 +38,7 @@ response:
                      'u_salary_1_5_year': salary * 4}}
 
 
-==================
+___
 
 EP_3
 Method: GET
@@ -55,7 +55,7 @@ response:
           'daily_sleep': weight * 2.5}
 
 
-==================
+___
 
 EP_4
 Method: GET
@@ -77,7 +77,7 @@ response:
           }
 
 
-==================
+___
 
 EP_5
 Method: GET
@@ -100,7 +100,7 @@ response:
           }
 
 
-==================
+___
 
 EP_6
 Method: GET
@@ -116,7 +116,7 @@ response:
           'salary': [salary, str(salary * 2), str(salary * 3)]}
 
 
-==================
+___
 
 EP_7
 Method: POST
