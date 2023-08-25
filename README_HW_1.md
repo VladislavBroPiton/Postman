@@ -137,5 +137,4 @@ response:
                      'u_salary_5_years': salary * 4.2}
           }
 
-![Спасибо за просмотр](11.jpg
-)
+[Спасибо за просмотр](https://kartinkof.club/uploads/posts/2022-03/1648262006_1-kartinkof-club-p-mem-spasibo-za-prosmotr-1.jpg)
