@@ -1,13 +1,13 @@
-Postman.
-HW_1
+#Postman.
+###HW_1
 
-Создать запросы в Postman.
+###Создать запросы в Postman.
 
 Protocol: http
 IP: 162.55.220.72
 Port: 5005
 
-EP_1
+###EP_1
 Method: GET
 EndPoint: /get_method
 request url params: 
@@ -22,7 +22,7 @@ response:
 
 ___
 
-EP_2
+###EP_2
 Method: POST
 EndPoint: /user_info_3
 request form data: 
@@ -40,7 +40,7 @@ response:
 
 ___
 
-EP_3
+###EP_3
 Method: GET
 EndPoint: /object_info_1
 request url params: 
@@ -57,7 +57,7 @@ response:
 
 ___
 
-EP_4
+###EP_4
 Method: GET
 EndPoint: /object_info_2
 request url params: 
@@ -79,7 +79,7 @@ response:
 
 ___
 
-EP_5
+###EP_5
 Method: GET
 EndPoint: /object_info_3
 request url params: 
@@ -102,7 +102,7 @@ response:
 
 ___
 
-EP_6
+###EP_6
 Method: GET
 EndPoint: /object_info_4
 request url params: 
@@ -118,7 +118,7 @@ response:
 
 ___
 
-EP_7
+###EP_7
 Method: POST
 EndPoint: /user_info_2
 request form data: 
@@ -136,3 +136,6 @@ response:
                      'u_age': age,
                      'u_salary_5_years': salary * 4.2}
           }
+
+![Спасибо за просмотр](11.jpg
+)
