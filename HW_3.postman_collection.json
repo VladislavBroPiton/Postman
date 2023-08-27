@@ -86,6 +86,10 @@
 							"\r",
 							"pm.test(\"Check salary*2.9 req-res\", function () {\r",
 							"        pm.expect(Res_body.qa_salary_after_12_months).to.eql(Req_json.salary*2.9);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check salary*4 req-res\", function () {\r",
+							"        pm.expect(Res_body.person[\"u_salary_1_5_year\"]).to.eql(Req_json.salary*4);\r",
 							"});"
 						],
 						"type": "text/javascript"
