@@ -115,7 +115,15 @@
 							"    pm.response.to.be.json;\r",
 							"});\r",
 							"var Res_body = pm.response.json();\r",
-							"var Req_body = request.data;"
+							"var Req_body = request.data;\r",
+							"\r",
+							"pm.test(\"name\", function () {\r",
+							"    pm.expect(Res_body.name).to.eql(pm.environment.get(\"name\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"age\", function () {\r",
+							"    pm.expect(Res_body.age).to.eql(Req_body.age);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
