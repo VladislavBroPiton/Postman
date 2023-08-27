@@ -70,7 +70,15 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							""
+							"pm.test(\"Проверка структуры json в ответе\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"var Res_body = pm.response.json();\r",
+							"var Req_json = JSON.parse(pm.request.body.raw);\r",
+							"\r",
+							"pm.test(\"salary req-res\", function () {\r",
+							"       pm.expect(Res_body.start_qa_salary).to.eql(Req_json.salary);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
