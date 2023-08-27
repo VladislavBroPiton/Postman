@@ -78,6 +78,14 @@
 							"\r",
 							"pm.test(\"salary req-res\", function () {\r",
 							"       pm.expect(Res_body.start_qa_salary).to.eql(Req_json.salary);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check salary*2 req-res\", function () {\r",
+							"        pm.expect(Res_body.qa_salary_after_6_months).to.eql(Req_json.salary*2);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check salary*2.9 req-res\", function () {\r",
+							"        pm.expect(Res_body.qa_salary_after_12_months).to.eql(Req_json.salary*2.9);\r",
 							"});"
 						],
 						"type": "text/javascript"
