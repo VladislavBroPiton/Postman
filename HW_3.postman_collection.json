@@ -289,6 +289,10 @@
 							"\r",
 							"pm.test(\"Check daily_food\", function () {\r",
 							"        pm.expect(Res_body.daily_food).to.eql(+Req_body.weight*0.012);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check daily_sleep\", function () {\r",
+							"        pm.expect(Res_body.daily_sleep).to.eql(+Req_body.weight*2.5);\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -330,6 +334,63 @@
 					],
 					"path": [
 						"test_pet_info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/get_test_user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "550",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Vlad",
+							"type": "text"
+						},
+						{
+							"key": "auth_token",
+							"value": "/s34lfgbj/Vlad/jjd909/98108kjkWpqc4388Qwe181619evny",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/get_test_user",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"get_test_user"
 					]
 				}
 			},
