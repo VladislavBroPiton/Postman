@@ -419,7 +419,10 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							""
+							"var Res_body = pm.response.json()\r",
+							"function R_m(min, max) {\r",
+							"    return Math.floor(Math.random() * (max - min) ) + min;\r",
+							"};"
 						],
 						"type": "text/javascript"
 					}
