@@ -354,7 +354,11 @@
 							"    pm.response.to.be.json;\r",
 							"});\r",
 							"var Res_body = pm.response.json();\r",
-							"var Req_body = request.data;"
+							"var Req_body = request.data;\r",
+							"\r",
+							"pm.test(\"Check name\", function () {\r",
+							"        pm.expect(Res_body.name).to.eql(pm.environment.get(\"name\"));\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
