@@ -352,7 +352,9 @@
 							"\r",
 							"pm.test(\"Response is JSON\", function () {\r",
 							"    pm.response.to.be.json;\r",
-							"});"
+							"});\r",
+							"var Res_body = pm.response.json();\r",
+							"var Req_body = request.data;"
 						],
 						"type": "text/javascript"
 					}
