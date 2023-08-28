@@ -280,7 +280,11 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							""
+							"pm.test(\"Response is JSON\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"var Resp_body = pm.response.json();"
 						],
 						"type": "text/javascript"
 					}
