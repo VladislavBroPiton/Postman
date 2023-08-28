@@ -202,7 +202,19 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							""
+							"pm.test(\"Response is JSON\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"var Res_body = pm.response.json();\r",
+							"var Req_body = request.data;\r",
+							"\r",
+							"pm.test(\"Check salary req-res\", function () {\r",
+							"       pm.expect(Res_body.salary[0]).to.eql(+Req_body.salary);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check salary*2 req-res\", function () {\r",
+							"       pm.expect(+Res_body.salary[1]).to.eql(+Req_body.salary*2);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -231,7 +243,7 @@
 						},
 						{
 							"key": "auth_token",
-							"value": "\n/s34lfgbj/Vlad/jjd909/98108kjkWpqc4388Qwe181619evny",
+							"value": "/s34lfgbj/Vlad/jjd909/98108kjkWpqc4388Qwe181619evny",
 							"type": "text"
 						}
 					]
