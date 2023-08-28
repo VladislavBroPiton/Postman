@@ -284,7 +284,12 @@
 							"    var jsonData = pm.response.json();\r",
 							"    pm.response.to.be.json;\r",
 							"});\r",
-							"var Resp_body = pm.response.json();"
+							"var Res_body = pm.response.json();\r",
+							"var Req_body = request.data;\r",
+							"\r",
+							"pm.test(\"Check daily_food\", function () {\r",
+							"        pm.expect(Res_body.daily_food).to.eql(+Req_body.weight*0.012);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
