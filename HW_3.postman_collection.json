@@ -422,7 +422,10 @@
 							"var Res_body = pm.response.json()\r",
 							"function R_m(min, max) {\r",
 							"    return Math.floor(Math.random() * (max - min) ) + min;\r",
-							"};"
+							"};\r",
+							"var ran_curr = Res_body[R_m(0, Res_body.length)];\r",
+							"pm.environment.set(\"Cur_ID\", ran_curr.Cur_ID);\r",
+							"// console.log(ran_curr.Cur_ID);"
 						],
 						"type": "text/javascript"
 					}
