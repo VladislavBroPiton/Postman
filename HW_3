@@ -360,7 +360,9 @@
 							"        pm.expect(Res_body.name).to.eql(pm.environment.get(\"name\"));\r",
 							"});\r",
 							"\r",
-							""
+							"pm.test(\"Check age\", function () {\r",
+							"        pm.expect(Res_body.age).to.eql(Req_body.age);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
