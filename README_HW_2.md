@@ -1,4 +1,5 @@
-HW_2 Postman
+<img align='right' src="https://media.giphy.com/media/836HiJc7pgzy8iNXCn/giphy.gif" width="230" />
+# HW_2 Postman
 
 
 http://162.55.220.72:5005/first
