@@ -1,5 +1,6 @@
-# HW_3
+<img align="right" src="https://media1.giphy.com/media/13HgwGsXF0aiGY/giphy.gif" />
 
+# HW_3
 
 1) необходимо залогиниться  
 POST  
