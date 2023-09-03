@@ -82,7 +82,7 @@ response:
 ___
 
 ### EP_5  
-Method: GET  
+Method: **GET**  
 EndPoint: /object_info_3  
 request url params:   
  name: str  
