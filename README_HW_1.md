@@ -105,7 +105,7 @@ response:
 ___
 
 ### EP_6  
-Method: GET  
+Method: **GET**  
 EndPoint: /object_info_4  
 request url params:   
  name: str  
@@ -121,7 +121,7 @@ response:
 ___
 
 ### EP_7  
-Method: POST  
+Method: **POST**  
 EndPoint: /user_info_2  
 request form data:   
  name: str  
