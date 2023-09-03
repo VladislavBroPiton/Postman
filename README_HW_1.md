@@ -43,7 +43,7 @@ response:
 ___
 
 ### EP_3  
-Method: GET  
+Method: **GET**  
 EndPoint: /object_info_1  
 request url params:   
  name: str  
@@ -60,7 +60,7 @@ response:
 ___
 
 ### EP_4  
-Method: GET  
+Method: **GET**  
 EndPoint: /object_info_2  
 request url params:   
  name: str  
