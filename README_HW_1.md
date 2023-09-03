@@ -10,7 +10,7 @@ IP: 162.55.220.72
 Port: 5005  
 
 ### EP_1  
-Method: GET  
+Method: **GET**  
 EndPoint: /get_method  
 request url params:   
  name: str  
@@ -25,7 +25,7 @@ response:
 ___
 
 ### EP_2  
-Method: POST  
+Method: **POST**  
 EndPoint: /user_info_3  
 request form data:   
  name: str  
