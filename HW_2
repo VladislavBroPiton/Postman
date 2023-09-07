@@ -626,6 +626,6 @@
 					"body": "{\n    \"person\": {\n        \"u_age\": 34,\n        \"u_name\": [\n            \"Nikita\",\n            1500,\n            34\n        ],\n        \"u_salary_5_years\": 6300\n    },\n    \"qa_salary_after_1.5_year\": 4950,\n    \"qa_salary_after_12_months\": 4050.0000000000005,\n    \"qa_salary_after_3.5_years\": 5700,\n    \"qa_salary_after_6_months\": 3000,\n    \"start_qa_salary\": 1500\n}"
 				}
 			]
-		}
+		}	
 	]
 }
