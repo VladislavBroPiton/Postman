@@ -5,4 +5,4 @@
 Введите URL: https://api.example.com/protected-resource.  
 Перейдите на вкладку Authorization.  
 Выберите тип Bearer Token и введите токен.  
-Нажмите Send и получите доступ к защищённому ресурсу.  
+Нажмите Send и получите доступ к защищённому ресурсу.      
