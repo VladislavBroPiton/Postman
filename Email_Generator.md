@@ -11,3 +11,16 @@
 Добавьте Pre-request Script:    
 Перейдите на вкладку "Pre-request Script" в запросе.  
 Вставьте следующий код:  
+
+```
+let emails = [];
+const domain = "example.com"; // Измените на нужный вам домен
+
+for (let i = 1; i <= 10000; i++) {
+    let email = `user${i}@${domain}`;
+    emails.push(email);
+}
+
+// Сохраните сгенерированные email адреса в переменной окружения Postman
+pm.environment.set("generatedEmails", JSON.stringify(emails));
+```
