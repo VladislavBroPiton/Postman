@@ -34,3 +34,7 @@ pm.environment.set("generatedEmails", JSON.stringify(emails));
 let emails = JSON.parse(pm.environment.get("generatedEmails"));
 console.log(emails);
 ```
+Примечания:    
+Измените домен на желаемый (например, example.com).    
+Вы можете вывести адреса в консоль Postman, чтобы проверить их.    
+Если вам нужны адреса с разными доменами, вы можете адаптировать код для генерации адресов с разными доменными именами, например, перемешивая их из массива.    
