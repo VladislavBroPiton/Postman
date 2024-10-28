@@ -30,3 +30,7 @@ pm.environment.set("generatedEmails", JSON.stringify(emails));
 После исполнения запроса в разделе "Environment" вы найдете переменную generatedEmails, где будут храниться все 10,000 сгенерированных email адресов в виде JSON-строки.    
 2. Просмотрите сгенерированные email адреса:    
 В "Tests" вы можете добавить код для вывода сгенерированных адресов в консоль:    
+```
+let emails = JSON.parse(pm.environment.get("generatedEmails"));
+console.log(emails);
+```
