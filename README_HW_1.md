@@ -22,7 +22,9 @@ response:
     “Str”,  
     “Str”  
 ]  
-``` http://162.55.220.72:5005/get_method?name=str&age=int ```
+``` http://162.55.220.72:5005/get_method?name=str&age=int ``` 
+![Postman_aQ2GrYnOG5](https://github.com/user-attachments/assets/ff6b2b9e-af9e-4ea9-868c-bb6674a61718)
+
 ___
 
 ### EP_2  
