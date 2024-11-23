@@ -21,6 +21,50 @@ http://162.55.220.72:5005/user_info_3
 10. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
 11. Вывести в консоль параметр family из response.
 12. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)
+```
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+var jsonData = pm.response.json();
+console.log(jsonData)
+
+var req_body = request.data
+var u_name = req_body.name
+var u_age = req_body.age
+var u_salary = req_body.salary
+
+pm.test("user_name", function () {
+    pm.expect(jsonData.name).to.eql("Vlad");
+});
+
+pm.test("user_age", function () {
+    pm.expect(jsonData.age).to.eql("30");
+});
+
+pm.test("user_salary", function () {
+    pm.expect(jsonData.salary).to.eql(550);
+});
+
+pm.test("user_name_automative", function () {
+    pm.expect(jsonData.name).to.eql(u_name);
+});
+
+pm.test("user_age_automative", function () {
+    pm.expect(jsonData.age).to.eql(u_age);
+});
+
+pm.test("user_salary_automative", function () {
+    pm.expect(jsonData.salary).to.eql(+u_salary);
+});
+
+console.log(jsonData.family)
+
+var salary_1_5 = jsonData.family.u_salary_1_5_year
+pm.test("user_salary_1_5", function () {
+    pm.expect(salary_1_5).to.eql(Number(u_salary*4));
+});
+```
 
 http://162.55.220.72:5005/object_info_3
 1. Отправить запрос.
