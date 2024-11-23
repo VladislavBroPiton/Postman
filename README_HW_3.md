@@ -36,7 +36,36 @@ resp.
 1) Статус код 200  
 2) Проверка структуры json в ответе.  
 3) В ответе указаны коэффициенты умножения salary, напишите тесты по проверке правильности результата перемножения на коэффициент.  
-4) Достать значение из поля 'u_salary_1.5_year' и передать в поле salary запроса http://162.55.220.72:5005/get_test_user  
+4) Достать значение из поля 'u_salary_1.5_year' и передать в поле salary запроса http://162.55.220.72:5005/get_test_user 
+```
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Проверка структуры json в ответе", function () {
+    pm.response.to.be.json;
+});
+var Res_body = pm.response.json();
+var Req_json = JSON.parse(pm.request.body.raw);
+
+pm.test("salary req-res", function () {
+       pm.expect(Res_body.start_qa_salary).to.eql(Req_json.salary);
+});
+
+pm.test("Check salary*2 req-res", function () {
+        pm.expect(Res_body.qa_salary_after_6_months).to.eql(Req_json.salary*2);
+});
+
+pm.test("Check salary*2.9 req-res", function () {
+        pm.expect(Res_body.qa_salary_after_12_months).to.eql(Req_json.salary*2.9);
+});
+
+pm.test("Check salary*4 req-res", function () {
+        pm.expect(Res_body.person["u_salary_1_5_year"]).to.eql(Req_json.salary*4);
+});
+
+pm.environment.set("salary", Res_body.person["u_salary_1_5_year"]);
+``` 
 ___
 
 3) http://162.55.220.72:5005/new_data  
