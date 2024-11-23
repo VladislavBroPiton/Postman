@@ -40,7 +40,9 @@ response:
           'family': {'children': [['Alex', 24], ['Kate', 12]],  
                      'u_salary_1_5_year': salary * 4}}  
 
-https://imgur.com/jkOWZRl
+https://imgur.com/jkOWZRl 
+![Postman_26TdKIuUB6](https://github.com/user-attachments/assets/1fd7abec-949f-4c80-8a95-8fcd3fb85464)
+
 ___
 
 ### EP_3  
