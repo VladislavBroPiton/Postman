@@ -218,5 +218,74 @@ http://162.55.220.72:5005/user_info_2
 20. Проверить, что что параметр u_age равен age из request (age забрать из request.)
 21. Проверить, что параметр u_salary_5_years равен salary*4.2 из request (salary забрать из request.)
 22. ***Написать цикл который выведет в консоль по порядку элементы списка из параметра person.
+```
+var resp_json = pm.response.json();
+console.log(resp_json)
 
+pm.test("Check resp for 'start_qa_salary'", function () { 
+    pm.expect(resp_json).haveOwnProperty("start_qa_salary"); 
+});
+
+pm.test("Check resp for 'qa_salary_after_6_months'", function () { 
+    pm.expect(resp_json).haveOwnProperty("qa_salary_after_6_months"); 
+});
+
+pm.test("Check resp for 'qa_salary_after_12_months'", function () { 
+    pm.expect(resp_json).haveOwnProperty("qa_salary_after_12_months"); 
+});
+
+pm.test("Check resp for 'qa_salary_after_1.5_year'", function () { 
+    pm.expect(resp_json).haveOwnProperty("qa_salary_after_1.5_year"); 
+});
+
+pm.test("Check resp for 'qa_salary_after_3.5_years'", function () { 
+    pm.expect(resp_json).haveOwnProperty("qa_salary_after_3.5_years"); 
+});
+
+pm.test("Check resp for 'person'", function () { 
+    pm.expect(resp_json).haveOwnProperty("person"); 
+});
+
+var request_salary = pm.environment.get("salary")
+console.log(request_salary)
+
+pm.test("start_user_salary", function () {
+    pm.expect(request_salary).to.eql(resp_json.start_qa_salary);
+});
+
+pm.test("qa_salary_after_6_months", function () {
+    pm.expect(request_salary*2).to.eql(resp_json.qa_salary_after_6_months);
+});
+
+pm.test("qa_salary_after_12_months", function () {
+    pm.expect(request_salary*2.7).to.eql(resp_json.qa_salary_after_12_months);
+});
+
+pm.test("qa_salary_aftery_1.5_year", function () {
+    pm.expect(request_salary*3.3).to.eql(resp_json['qa_salary_after_1.5_year']);
+});
+
+pm.test("qa_salary_aftery_3.5_year", function () {
+    pm.expect(request_salary*3.8).to.eql(resp_json['qa_salary_after_3.5_years']);
+});
+
+pm.test("person salary", function () {
+    pm.expect(request_salary).to.eql(resp_json.person.u_name[1]);
+});
+
+var request_age = pm.environment.get("age")
+console.log(request_age)
+
+pm.test("person age", function () {
+    pm.expect(request_age).to.eql(resp_json.person.u_age);
+});
+
+pm.test("qa_salary_aftery_3.5_year", function () {
+    pm.expect(request_salary*4.2).to.eql(resp_json.person.u_salary_5_years);
+});
+
+for (var key in resp_json.person) {
+    console.log(key,':', resp_json.person[key]);
+};
+```
   
