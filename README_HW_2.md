@@ -147,7 +147,52 @@ http://162.55.220.72:5005/object_info_4
 19. Передать в окружение переменную age
 20. Передать в окружение переменную salary
 21. Написать цикл который выведет в консоль по порядку элементы списка из параметра salary.
+```
+var responce_JSON = pm.response.json();
+var req_url = pm.request.url.query.toObject()
 
+var resp_u_name = responce_JSON.name
+var req_url_name = req_url.name
+pm.test("user_name", function () {
+    pm.expect(resp_u_name,typeof resp_u_name).to.eql(req_url_name, typeof req_url_name);
+});
+
+var resp_u_age = responce_JSON.age
+var req_url_age = req_url.age
+pm.test("user_age", function () {
+    pm.expect(resp_u_age).to.eql(+req_url_age);
+});
+
+var resp_u_salary = responce_JSON.salary
+var req_url_salary = req_url.salary
+
+console.log("salary from request = ", req_url_salary)
+console.log ("salary from responce = ", resp_u_salary)
+
+console.log ("1st element salary from responce = ", resp_u_salary[0])
+console.log ("2nd element salary from responce = ", resp_u_salary[1])
+console.log ("3rd element salary from responce = ", resp_u_salary[2])
+
+pm.test("user_salary", function () {
+    pm.expect(+req_url_salary).to.eql(resp_u_salary[0]);
+});
+
+pm.test("user_salary for 2 mounth", function () {
+    pm.expect(+req_url_salary*2).to.eql(+resp_u_salary[1]);
+});
+
+pm.test("user_salary for 3 mounth", function () {
+    pm.expect(+req_url_salary*3).to.eql(+resp_u_salary[2]);
+});
+
+pm.environment.set("name", responce_JSON.name);
+pm.environment.set("age", responce_JSON.age);
+pm.environment.set("salary", responce_JSON.salary[0]);
+
+for (item in resp_u_salary) {
+    console.log(+resp_u_salary[item]);
+};
+```
 ___
 
 http://162.55.220.72:5005/user_info_2
