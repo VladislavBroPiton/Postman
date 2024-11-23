@@ -65,7 +65,7 @@ pm.test("user_salary_1_5", function () {
     pm.expect(salary_1_5).to.eql(Number(u_salary*4));
 });
 ```
-
+___
 http://162.55.220.72:5005/object_info_3
 1. Отправить запрос.
 2. Статус код 200
