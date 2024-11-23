@@ -79,8 +79,51 @@ http://162.55.220.72:5005/object_info_3
 10. Проверить, что у параметра dog есть параметры age.
 11. Проверить, что параметр name имеет значение Luky.
 12. Проверить, что параметр age имеет значение 4.
+```
+var responce_JSON = pm.response.json();
+var req_url = pm.request.url.query.toObject()
+
+var resp_u_name = responce_JSON.name
+var req_url_name = req_url.name
 
 
+pm.test("user_name", function () {
+    pm.expect(resp_u_name,typeof resp_u_name).to.eql(req_url_name, typeof req_url_name);
+});
+
+var resp_u_age = responce_JSON.age
+var req_url_age = req_url.age
+
+pm.test("user_age", function () {
+    pm.expect(resp_u_age).to.eql(req_url_age);
+});
+
+var resp_u_salary = responce_JSON.salary
+var req_url_salary = req_url.salary
+
+pm.test("user_salary", function () {
+    pm.expect(resp_u_salary).to.eql(+req_url_salary);
+});
+
+console.log(responce_JSON.family)
+
+var param_dog = responce_JSON.family.pets.dog
+pm.test("Check dogs parametrs 'NAME'", function () { 
+    pm.expect(param_dog).haveOwnProperty('name'); 
+});
+
+pm.test("Check dogs parametrs 'AGE'", function () { 
+    pm.expect(param_dog).haveOwnProperty('age'); 
+});
+
+pm.test("Check dog name", function () {
+    pm.expect(param_dog.name).to.eql("Luky");
+});
+
+pm.test("Check dog age", function () {
+    pm.expect(param_dog.age).to.eql(4);
+});
+```
 ___
 http://162.55.220.72:5005/object_info_4
 1. Отправить запрос.
