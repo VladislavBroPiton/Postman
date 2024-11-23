@@ -16,13 +16,13 @@ EndPoint: /get_method
 request url params:   
  name: str  
  age: int  
-``` http://162.55.220.72:5005/get_method?name=str&age=int ```
+
 response:   
 [  
     “Str”,  
     “Str”  
 ]  
-
+``` http://162.55.220.72:5005/get_method?name=str&age=int ```
 ___
 
 ### EP_2  
