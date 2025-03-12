@@ -50,3 +50,31 @@
 **Поля в ответе нужно:**   
 - сравнить с ТЗ   
 - сравнить между собой SOAP \ REST   
+
+
+## Примеры скриптов
+```
+// Проверка статуса ответа
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+// Проверка наличия определенного поля в ответе
+pm.test("Response has a title", function () {
+    pm.expect(pm.response.json().title).to.be.a('string');
+});
+
+// Проверка значения поля userId
+pm.test("User ID is 1", function () {
+    pm.expect(pm.response.json().userId).to.eql(1);
+});
+
+// Проверка времени ответа
+pm.test("Response time is less than 200ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(200);
+});
+
+// Сохранение данных из ответа в переменную окружения
+pm.environment.set("post_id", pm.response.json().id);
+
+```
